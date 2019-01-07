@@ -96,4 +96,6 @@ for i in range(len(img_ar)):
 		new_img_ar[i][j] = new_img_ar[i][j]*1000-pow(.1,15)
 print "regenerated array", new_img_ar		
 ax2.imshow(new_img_ar, cmap = plt.get_cmap('gray'))
+
+fig.savefig(str(ti.time())+".jpg")
 plt.show()
