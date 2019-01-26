@@ -41,11 +41,9 @@ def mat_fac(X,K,S=10000):
 		nX = np.dot(W,H)
 		for i in range(len(X)):
 			for j in range(len(X[i])):
-				#ne = ne + pow((X[i][j]-nX[i][j]),2)
 				ne = ne + (X[i][j]*np.log((X[i][j]+0.0)/(nX[i][j]+0.0))-X[i][j]+nX[i][j])
 		print ne
 		if np.abs(ne-e)>0:
-		#if np.abs(ne)>0:
 			e=ne
 			ne=0
 		else:
